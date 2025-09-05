@@ -1,0 +1,32 @@
+services:
+  # Backend API Service
+  - type: web
+    name: ai-document-summarizer-backend
+    env: node
+    plan: free
+    buildCommand: cd backend && npm install && npm run build
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: CLAUDE_API_KEY
+        sync: false
+      - key: CORS_ORIGIN
+        value: https://ai-document-summarizer-frontend.onrender.com
+
+  # Frontend Service
+  - type: web
+    name: ai-document-summarizer-frontend
+    env: static
+    plan: free
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://ai-document-summarizer-backend.onrender.com
