@@ -465,27 +465,6 @@ function App() {
           <p style={{ marginTop: '0.5rem' }}>
             Built with React, TypeScript, and OpenAI GPT-4
           </p>
-          <div style={{
-            backgroundColor: '#fef3c7',
-            border: '1px solid #fde68a',
-            borderRadius: '0.5rem',
-            padding: '1rem',
-            marginTop: '1rem',
-            textAlign: 'left'
-          }}>
-            <p style={{ margin: 0, fontWeight: '600', color: '#92400e' }}>
-              ⚠️ Setup Required:
-            </p>
-            <p style={{ margin: '0.5rem 0 0 0', color: '#92400e', fontSize: '0.8rem' }}>
-              To use real AI analysis, add an API key to <code>backend/.env</code>:
-              <br />
-              <strong>Free Option:</strong> <code>GEMINI_API_KEY=your_gemini_key</code>
-              <br />
-              <strong>Premium:</strong> <code>OPENAI_API_KEY=your_openai_key</code>
-              <br />
-              <em>Get Gemini API key free at: <a href="https://makersuite.google.com/app/apikey" target="_blank" style={{color: '#1e40af'}}>Google AI Studio</a></em>
-            </p>
-          </div>
         </div>
       </div>
     </div>
