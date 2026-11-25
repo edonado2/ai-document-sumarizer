@@ -1,12 +1,9 @@
 # AI-Powered Document Summarizer
 
-A production-ready web application that leverages OpenAI's GPT-4 technology to automatically extract and summarize text from various document formats. Built with modern web technologies and designed for scalability, this application is perfect for businesses, researchers, and professionals who need to quickly understand lengthy documents.
+A TypeScript web app that summarizes uploaded PDF, DOCX and text files with Gemini, OpenAI or Claude.
 
 ![AI Document Summarizer](https://img.shields.io/badge/AI-Powered-blue) ![React](https://img.shields.io/badge/React-18+-61dafb) ![TypeScript](https://img.shields.io/badge/TypeScript-5+-3178c6) ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4-green)
 
-## 🚀 Live Demo
-
-[View Live Demo](https://your-demo-url.com) | [Video Walkthrough](https://your-video-url.com)
 
 ## 📋 Table of Contents
 
@@ -25,7 +22,7 @@ A production-ready web application that leverages OpenAI's GPT-4 technology to a
 
 ### Core Functionality
 - **Multi-Format Support**: Upload PDF, Word (.docx), and text files
-- **AI-Powered Summarization**: Advanced GPT-4 integration for intelligent text analysis
+- **AI-Powered Summarization**: Gemini, OpenAI or Claude generates the summary
 - **Key Insights Extraction**: Automatically generates 3-5 actionable insights
 - **Real-time Processing**: Live progress tracking with detailed status updates
 - **Secure File Handling**: Temporary file processing with automatic cleanup
@@ -42,7 +39,7 @@ A production-ready web application that leverages OpenAI's GPT-4 technology to a
 - **Modular Architecture**: Clean separation of concerns and reusable components
 - **API-First Design**: RESTful API with comprehensive error handling
 - **Performance Optimized**: Efficient file processing and memory management
-- **Production Ready**: Environment configuration and deployment scripts
+- **Environment configuration**: documented variables for each provider
 
 ## 🛠 Tech Stack
 
@@ -57,7 +54,7 @@ A production-ready web application that leverages OpenAI's GPT-4 technology to a
 ### Backend
 - **Node.js** with Express.js
 - **TypeScript** for type safety
-- **OpenAI API** (GPT-4) for AI processing
+- **AI providers**: Gemini 2.0 Flash, OpenAI gpt-4o-mini, optional Claude
 - **Multer** for file upload handling
 - **PDF-Parse** for PDF text extraction
 - **Mammoth** for Word document processing
@@ -190,7 +187,7 @@ VITE_APP_VERSION=1.0.0
 ### Basic Workflow
 1. **Upload Document**: Drag and drop or click to select a PDF, Word, or text file
 2. **Text Extraction**: The system automatically extracts text from your document
-3. **AI Processing**: GPT-4 analyzes the content and generates a summary
+3. **AI Processing**: Gemini or OpenAI generates the summary
 4. **View Results**: Review the summary and key insights
 5. **Copy & Share**: Use the copy buttons to share results
 
@@ -389,13 +386,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ### Getting Help
 - 📧 Email: support@yourdomain.com
-- 💬 Discord: [Join our community](https://discord.gg/your-invite)
 - 🐛 Issues: [GitHub Issues](https://github.com/yourusername/ai-document-summarizer/issues)
 - 📖 Documentation: [Wiki](https://github.com/yourusername/ai-document-summarizer/wiki)
 
 ## 🌟 Acknowledgments
 
-- OpenAI for providing the GPT-4 API
+- Gemini, OpenAI and Claude for the summarization models
 - React and Vite teams for excellent developer tools
 - TailwindCSS for beautiful, utility-first CSS
 - All contributors and users who provide feedback

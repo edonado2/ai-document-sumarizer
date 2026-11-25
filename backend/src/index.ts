@@ -11,10 +11,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
+const defaultOrigins = process.env.NODE_ENV === 'production'
+  ? ['https://ai-document-summarizer-frontend.onrender.com']
+  : ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:5174'];
 const corsOptions = {
-  origin: process.env.CORS_ORIGIN || process.env.NODE_ENV === 'production' 
-    ? ['https://ai-document-summarizer-frontend.onrender.com'] 
-    : ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:5174'],
+  origin: process.env.CORS_ORIGIN ? process.env.CORS_ORIGIN.split(',') : defaultOrigins,
   credentials: true,
   optionsSuccessStatus: 200
 };
